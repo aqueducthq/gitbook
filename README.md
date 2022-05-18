@@ -36,6 +36,7 @@ For more on this pipeline, check our Quickstart Guide (**ADD LINK**).&#x20;
 
 ### Core Concepts
 
+* Workflows
 * Integrations&#x20;
 * Operators
 * Artifacts

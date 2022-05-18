@@ -3,13 +3,17 @@
 * [Welcome to Aqueduct](README.md)
 * [The Aqueduct Philosophy](the-aqueduct-philosophy.md)
 * [Installation and Deployment](installation-and-deployment.md)
-
-## Example Workflows
-
-* [Page 1](example-workflows/page-1.md)
-* [Page 2](example-workflows/page-2.md)
-* [Page 3](example-workflows/page-3.md)
-
-## workflows
-
-* [Page 4](workflows/page-4.md)
+* [Quickstart Guide](quickstart-guide.md)
+* [Example Workflows](example-workflows/README.md)
+  * [Demo Data Warehouse](example-workflows/demo-data-warehouse.md)
+* [Workflows](workflows/README.md)
+  * [Creating a Workflow](workflows/creating-a-workflow.md)
+  * [Workflow Versions](workflows/workflow-versions.md)
+  * [Managing Workflow Schedules](workflows/managing-workflow-schedules.md)
+  * [Editing a Workflow](workflows/editing-a-workflow.md)
+  * [Deleting a Workflow](workflows/deleting-a-workflow.md)
+* [Integrations](integrations.md)
+* [Operators](operators.md)
+* [Artifacts](artifacts.md)
+* [Metrics & Checks](metrics-and-checks.md)
+* [Aqueduct UI](aqueduct-ui.md)
