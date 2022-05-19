@@ -22,7 +22,7 @@ Once we have a connection to our database, we can simply call `.sql()` on the co
 customers = demo_db.sql('SELECT * FROM customers;')
 ```
 
-This returns what we call an [**Artifact**](../../artifacts.md) **** in Aqueduct terminology. An artifact is simply just a wrapper around some data that we'll track a part of your workflow. You can call [Operators](../../operators/) on your artifacts -- for more on this, see the guide on [Operators](../../operators/) or [Workflows](../../workflows/page-4.md).
+This returns what we call an [**Artifact**](../../artifacts/) **** in Aqueduct terminology. An artifact is simply just a wrapper around some data that we'll track a part of your workflow. You can call [Operators](../../operators.md) on your artifacts -- for more on this, see the guide on [Operators](../../operators.md) or [Workflows](../../workflows/page-4.md).
 
 {% hint style="warning" %}
 Every SQL database has a slightly different dialect of SQL, and Aqueduct does not check for the correctness of your query.&#x20;
@@ -39,3 +39,7 @@ In order to save an aritfact to a database, you can call `.save()` on the artifa
   * `append`: In append mode, the data in this artifact will be appended to an existing table (if it exists); if the table does not exist, a new table will be created. If the existing schema does not match the schema of the new data, an error will be thrown.
   * `replace`: In replace mode, the an existing table of the same name will be completely wiped and replaced with the new data -- this mode does not require the old and new schemas to be compatible.
   * `fail`: In failure mode, the write operation will fail if a table of the same name already exists.
+
+```python
+customers.save(demo_db.config(table='customers_duplicate', save_mode='replace'))
+```
