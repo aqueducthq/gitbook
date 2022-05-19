@@ -7,3 +7,8 @@ To get a connection to an integration, you can simply call `.integration()` on t
 ```python
 postgres = client.integration('postgres/analytics')
 ```
+
+Aqueduct currently supports the following integrations:
+
+* [Relational Databases](relational-databases.md): Postgres, MySQL, Snowflake, Redshift, BigQuery, MariaDB&#x20;
+* [AWS S3](aws-s3.md)

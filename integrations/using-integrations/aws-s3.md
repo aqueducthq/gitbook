@@ -16,7 +16,7 @@ Once we've loaded a connection to our S3 bucket, we can access data by using the
 customers = my_bucket.file('data/sales/customers.csv')
 ```
 
-This returns what we call an [**Artifact**](../../artifacts.md) **** in Aqueduct terminology. An artifact is simply just a wrapper around some data that we'll track a part of your workflow. You can call [Operators](../../operators.md) on your artifacts -- for more on this, see the guide on [Operators](../../operators.md) or [Workflows](../../workflows/page-4.md).
+This returns what we call an [**Artifact**](../../artifacts.md) **** in Aqueduct terminology. An artifact is simply just a wrapper around some data that we'll track a part of your workflow. You can call [Operators](../../operators/) on your artifacts -- for more on this, see the guide on [Operators](../../operators/) or [Workflows](../../workflows/page-4.md).
 
 {% hint style="info" %}
 Note that Aqueduct currently only supports loading tabular data either in CSVs or in Parquet files from AWS S3. Other file formats aren't yet supported.
