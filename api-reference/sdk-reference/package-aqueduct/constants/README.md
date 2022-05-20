@@ -1,3 +1,3 @@
-# package `aqueduct.constanst`
+package `aqueduct.constanst`
 * [`exports`](/exports)
 * [`metrics`](/metrics)
