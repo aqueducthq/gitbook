@@ -5,6 +5,8 @@
 * [Installation and Deployment](installation-and-deployment.md)
 * [Quickstart Guide](quickstart-guide.md)
 * [Example Workflows](example-workflows/page-1.md)
+  * [Churn Ensemble](page-1/churn-ensemble.md)
+  * [Sentiment Analysis](page-1/sentiment-analysis.md)
   * [Demo Data Warehouse](example-workflows/demo-data-warehouse.md)
 * [Workflows](workflows/page-4.md)
   * [Creating a Workflow](workflows/creating-a-workflow.md)

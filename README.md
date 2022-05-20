@@ -36,27 +36,27 @@ For more on this pipeline, check our Quickstart Guide (**ADD LINK**).&#x20;
 
 ### Core Concepts
 
-* Workflows
-* Integrations&#x20;
-* Operators
-* Artifacts
-* Metrics & Checks
+* [Workflows](workflows/page-4.md)
+* [Integrations](integrations/)&#x20;
+* [Operators](operators.md)
+* [Artifacts](artifacts.md)
+* [Metrics & Checks](metrics-and-checks.md)
 
 ### Example Workflows
 
-* The Demo Data Warehouse
-* Churn Prediction
-* Wine Quality Prediction
-* Sentiment Analysis
-* Missing Data Imputation
-* Product Recommendation
+* [The Demo Data Warehouse](example-workflows/demo-data-warehouse.md)
+* [Churn Ensemble](page-1/churn-ensemble.md)
+* Wine Quality Prediction (coming soon!)
+* [Sentiment Analysis](page-1/sentiment-analysis.md)
+* Missing Data Imputation (coming soon!)
+* Product Recommendation (coming soon!)
 
 ### Guides
 
-* Running with Airflow
-* Debugging a Prediction Pipeline
+* Running with Airflow (coming soon!)
+* Debugging a Prediction Pipeline (coming soon!)
 
 ### API Reference
 
-* Python SDK
-* Aqueduct CLI
+* [Python SDK](api-reference/sdk-reference/)
+* Aqueduct CLI (coming soon!)
