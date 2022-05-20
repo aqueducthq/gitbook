@@ -38,7 +38,7 @@ acidity_by_group.save(db.config(table="acidity_by_group"))
 
 This tells Aqueduct to save `acidity_by_group` to a table of the same name in the demo database (remember that `db` was a connection we loaded to the Aqueduct demo above) whenever the workflow is run.
 
-For this example, we'll stop here -- we know your workflows are likely much more complex than this, but one operator will do for our purposes. To see real-world examples, check out [page-1.md](../example-workflows/page-1.md "mention").&#x20;
+For this example, we'll stop here -- we know your workflows are likely much more complex than this, but one operator will do for our purposes. To see real-world examples, check out [example-workflows](../example-workflows/ "mention").&#x20;
 
 ### Previewing a Workflow
 

@@ -45,9 +45,9 @@ For more on this pipeline, check our Quickstart Guide (**ADD LINK**).&#x20;
 ### Example Workflows
 
 * [The Demo Data Warehouse](example-workflows/demo-data-warehouse.md)
-* [Churn Ensemble](page-1/churn-ensemble.md)
+* [Churn Ensemble](example-workflows/churn-ensemble.md)
 * Wine Quality Prediction (coming soon!)
-* [Sentiment Analysis](page-1/sentiment-analysis.md)
+* [Sentiment Analysis](example-workflows/sentiment-analysis.md)
 * Missing Data Imputation (coming soon!)
 * Product Recommendation (coming soon!)
 
