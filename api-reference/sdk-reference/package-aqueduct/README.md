@@ -1,4 +1,4 @@
-# package `aqueduct`
+# package aqueduct
 * [`artifact`](/artifact)
 * [`check_artifact`](/check_artifact)
 * [`decorator`](/decorator)

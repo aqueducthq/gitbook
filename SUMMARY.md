@@ -35,4 +35,5 @@
 * [Aqueduct UI](aqueduct-ui.md)
 * [API Reference](api-reference/README.md)
   * [Aqueduct CLI](api-reference/aqueduct-cli.md)
-  * [SDK Reference](api-reference/sdk-reference.md)
+  * [SDK Reference](api-reference/sdk-reference/README.md)
+    * [test](api-reference/sdk-reference/test.md)
