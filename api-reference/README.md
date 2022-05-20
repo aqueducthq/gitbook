@@ -2,5 +2,5 @@
 
 Below, you can find the reference for:
 
-* The Aqueduct Python SDK
-* The Aqueduct CLI
+* Aqueduct Python SDK
+* [Aqueduct CLI](aqueduct-cli.md)

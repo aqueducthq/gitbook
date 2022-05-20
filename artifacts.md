@@ -12,4 +12,4 @@ There are three operations that can be done on artifacts:
 
 * [Saving an Artifact](artifacts/saving-an-artifact.md)
 * Transforming an Artifact -- this is done by passing an Artifact as an argument to an [Operator](operators.md)
-* Attaching a [Metric or a Check](metrics-and-checks/) to an artifact -- again, this can be done by passing an Artifact as an argument to the relevant Metric or Check
+* Attaching a [Metric or a Check](metrics-and-checks.md) to an artifact -- again, this can be done by passing an Artifact as an argument to the relevant Metric or Check
