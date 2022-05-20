@@ -8,9 +8,9 @@ Aqueduct allows you to specify this context as a part of your function by passin
 import scikit
 import cloudpickle as cp
 import pandas as pd
-from aqueduct.operators import op
+from aqueduct import op
 
-@op(file_dependencies=['scikit_logistic.pkl']
+@op(file_dependencies=['scikit_logistic.pkl'])
 def predict(df: pd.DataFrame) -> pd.DataFrame:
     with open('scikit_logistic.pkl') as f:
         model = cp.loads(f)
