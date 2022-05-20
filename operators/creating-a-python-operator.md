@@ -4,7 +4,7 @@ Python Operators are simply Python functions annotated with the `@op` decorator,
 
 ```python
 import pandas as pd
-from aqueduct.decorators import op
+from aqueduct.decorator import op
 
 @op
 def my_prediction_function(input: pd.DataFrame) -> pd.DataFrame:

@@ -4,7 +4,7 @@ description: How all code runs in Aqueduct
 
 # Operators
 
-Every piece of code in Aqueduct is encapsulated withan an **Operator**. Operators take in and return [**Artifacts**](artifacts.md). Currently, Aqueduct supports Python operators and data retrieval operators. We plan to add support for other langauges like R in the future.&#x20;
+Every piece of code in Aqueduct is encapsulated within an **Operator**. Operators take in and return [**Artifacts**](artifacts.md). Currently, Aqueduct supports Python operators and data retrieval operators. We plan to add support for other langauges like R in the future.&#x20;
 
 This guide will walk you through:
 
