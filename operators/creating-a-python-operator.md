@@ -19,7 +19,7 @@ All Python functions in Aqueduct by default take in Pandas DataFrames and return
 When a Python function is annotated with `@op`, two things happen:
 
 1. Aqueduct packages up this code and infers any library dependencies that it might require, and prepares the code to run as a part of a workflow.&#x20;
-2. The annotated function will accept Aqueduct [Artifacts](../artifacts/) as inputs and return Artifacts as outputs -- the return values can in turn by used by other operators.&#x20;
+2. The annotated function will accept Aqueduct [Artifacts](../artifacts.md) as inputs and return Artifacts as outputs -- the return values can in turn by used by other operators.&#x20;
 
 {% hint style="info" %}
 Note that once an operator has been annotated with `@op`, it cannot be used as a "regular" Python function -- the inputs to the function must be Artifacts.
