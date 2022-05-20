@@ -1,3 +1,8 @@
+# Table of Contents
+
+* [aqueduct.operators](#aqueduct.operators)
+  * [GithubMetadata](#aqueduct.operators.GithubMetadata)
+
 <a id="aqueduct.operators"></a>
 
 # aqueduct.operators

@@ -1,3 +1,10 @@
+# Table of Contents
+
+* [aqueduct.enums](#aqueduct.enums)
+  * [MetaEnum](#aqueduct.enums.MetaEnum)
+  * [CheckSeverity](#aqueduct.enums.CheckSeverity)
+  * [GithubRepoConfigContentType](#aqueduct.enums.GithubRepoConfigContentType)
+
 <a id="aqueduct.enums"></a>
 
 # aqueduct.enums

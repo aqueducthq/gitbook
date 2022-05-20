@@ -1,3 +1,12 @@
+# Table of Contents
+
+* [aqueduct.integrations.salesforce\_integration](#aqueduct.integrations.salesforce_integration)
+  * [SalesforceIntegration](#aqueduct.integrations.salesforce_integration.SalesforceIntegration)
+    * [search](#aqueduct.integrations.salesforce_integration.SalesforceIntegration.search)
+    * [query](#aqueduct.integrations.salesforce_integration.SalesforceIntegration.query)
+    * [config](#aqueduct.integrations.salesforce_integration.SalesforceIntegration.config)
+    * [describe](#aqueduct.integrations.salesforce_integration.SalesforceIntegration.describe)
+
 <a id="aqueduct.integrations.salesforce_integration"></a>
 
 # aqueduct.integrations.salesforce\_integration

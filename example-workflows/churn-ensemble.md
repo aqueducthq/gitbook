@@ -46,19 +46,7 @@ pd.merge(customers_table, churn_table, on='cust_id').head()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -157,31 +145,6 @@ pd.merge(customers_table, churn_table, on='cust_id').head()
 </table>
 </div>
 
-```
-   cust_id  n_workflows  n_rows  n_users  company_size  n_integrations  \
-0        0            4    2007        2            29               5   
-1        1            3    8538        1            31               4   
-2        2            4    7548        1            29               3   
-3        3            3    4286        1            33               4   
-4        4            2    2136        1            28               3   
-
-   n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                3.0              1.0                False         2.0   
-1                1.0              1.0                False         3.0   
-2                1.0              3.0                False         1.0   
-3                1.0              4.0                False         3.0   
-4                0.0              1.0                False         2.0   
-
-   using_dbt  churn  
-0       True  False  
-1       True   True  
-2       True  False  
-3       True  False  
-4       True  False  
-```
-
-
-
 
 
 
@@ -207,8 +170,6 @@ def log_featurize(cust: pd.DataFrame) -> pd.DataFrame:
         features["log_"+col] = np.log(features[col] + 1.0)
     return features.drop(columns="cust_id")
 ```
-**Output:**
-
 
 
 
@@ -222,19 +183,7 @@ features_table.head()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -369,45 +318,6 @@ features_table.head()
 </table>
 </div>
 
-```
-   n_workflows  n_rows  n_users  company_size  n_integrations  \
-0            4    2007        2            29               5   
-1            3    8538        1            31               4   
-2            4    7548        1            29               3   
-3            3    4286        1            33               4   
-4            2    2136        1            28               3   
-
-   n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                3.0              1.0                False         2.0   
-1                1.0              1.0                False         3.0   
-2                1.0              3.0                False         1.0   
-3                1.0              4.0                False         3.0   
-4                0.0              1.0                False         2.0   
-
-   using_dbt  log_company_size  log_duration_months  log_n_data_eng  \
-0       True          3.401197             0.693147        1.098612   
-1       True          3.465736             0.693147        1.386294   
-2       True          3.401197             1.386294        0.693147   
-3       True          3.526361             1.609438        1.386294   
-4       True          3.367296             0.693147        1.098612   
-
-   log_n_integrations  log_n_rows  log_n_support_tickets  log_n_users  \
-0            1.791759    7.604894               1.386294     1.098612   
-1            1.609438    9.052399               0.693147     0.693147   
-2            1.386294    8.929170               0.693147     0.693147   
-3            1.609438    8.363342               0.693147     0.693147   
-4            1.386294    7.667158               0.000000     0.693147   
-
-   log_n_workflows  
-0         1.609438  
-1         1.386294  
-2         1.609438  
-3         1.386294  
-4         1.098612  
-```
-
-
-
 
 
 
@@ -485,8 +395,6 @@ def predict_ensemble(customers_table, linear_pred_table, tree_pred_table):
     return customers_table.assign(
         prob_churn = linear_pred_table.join(tree_pred_table).mean(axis=1))
 ```
-**Output:**
-
 
 
 
@@ -500,8 +408,6 @@ linear_pred_table = predict_linear(features_table)
 tree_pred_table = predict_tree(features_table)
 churn_table = predict_ensemble(customers_table, linear_pred_table, tree_pred_table)
 ```
-**Output:**
-
 
 
 
@@ -522,19 +428,7 @@ churn_table.head()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -633,31 +527,6 @@ churn_table.head()
 </table>
 </div>
 
-```
-   cust_id  n_workflows  n_rows  n_users  company_size  n_integrations  \
-0        0            4    2007        2            29               5   
-1        1            3    8538        1            31               4   
-2        2            4    7548        1            29               3   
-3        3            3    4286        1            33               4   
-4        4            2    2136        1            28               3   
-
-   n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                3.0              1.0                False         2.0   
-1                1.0              1.0                False         3.0   
-2                1.0              3.0                False         1.0   
-3                1.0              4.0                False         3.0   
-4                0.0              1.0                False         2.0   
-
-   using_dbt  prob_churn  
-0       True    0.076126  
-1       True    0.143632  
-2       True    0.161187  
-3       True    0.141960  
-4       True    0.161899  
-```
-
-
-
 
 
 
@@ -688,8 +557,6 @@ We will now deploy the above prediction workflow to the cloud.  You will need th
 import aqueduct 
 from aqueduct import op, check
 ```
-**Output:**
-
 
 
 
@@ -713,8 +580,6 @@ address = "<your_server_address>"
 api_key = "<your_api_key>"
 client = aqueduct.Client(api_key, address)
 ```
-**Output:**
-
 
 
 
@@ -738,8 +603,6 @@ warehouse = client.integration(name="aqueduct_demo")
 customers_table = warehouse.sql(query="SELECT * FROM customers;")
 print(type(customers_table))
 ```
-**Output:**
-
 
 
 
@@ -760,19 +623,7 @@ customers_table.get()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -950,51 +801,6 @@ customers_table.get()
 <p>500 rows × 11 columns</p>
 </div>
 
-```
-     cust_id  n_workflows  n_rows  n_users  company_size  n_integrations  \
-0          0            4    2007        2            29               5   
-1          1            3    8538        1            31               4   
-2          2            4    7548        1            29               3   
-3          3            3    4286        1            33               4   
-4          4            2    2136        1            28               3   
-..       ...          ...     ...      ...           ...             ...   
-495      495            2    3108        5            30               5   
-496      496            7    4240        1            30               1   
-497      497            3    2520        1            27               4   
-498      498           16    1972        1            33               1   
-499      499            3    7003        1            25               2   
-
-     n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                  3.0              1.0                False         2.0   
-1                  1.0              1.0                False         3.0   
-2                  1.0              3.0                False         1.0   
-3                  1.0              4.0                False         3.0   
-4                  0.0              1.0                False         2.0   
-..                 ...              ...                  ...         ...   
-495                3.0              3.0                False         4.0   
-496                2.0              1.0                False         2.0   
-497                1.0              1.0                False         2.0   
-498                3.0              3.0                False         3.0   
-499                3.0              1.0                False         1.0   
-
-     using_dbt  
-0         True  
-1         True  
-2         True  
-3         True  
-4         True  
-..         ...  
-495       True  
-496      False  
-497       True  
-498       True  
-499       True  
-
-[500 rows x 11 columns]
-```
-
-
-
 
 
 
@@ -1023,8 +829,6 @@ def log_featurize(cust: pd.DataFrame) -> pd.DataFrame:
         features["log_"+col] = np.log(features[col] + 1.0)
     return features.drop(columns="cust_id")
 ```
-**Output:**
-
 
 
 
@@ -1044,8 +848,6 @@ Any function that is decorated with `@op` can be called on any data table that y
 features_table = log_featurize(customers_table)
 print(type(features_table))
 ```
-**Output:**
-
 
 
 
@@ -1066,19 +868,7 @@ features_table.get().head()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1213,45 +1003,6 @@ features_table.get().head()
 </table>
 </div>
 
-```
-   n_workflows  n_rows  n_users  company_size  n_integrations  \
-0            4    2007        2            29               5   
-1            3    8538        1            31               4   
-2            4    7548        1            29               3   
-3            3    4286        1            33               4   
-4            2    2136        1            28               3   
-
-   n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                3.0              1.0                False         2.0   
-1                1.0              1.0                False         3.0   
-2                1.0              3.0                False         1.0   
-3                1.0              4.0                False         3.0   
-4                0.0              1.0                False         2.0   
-
-   using_dbt  log_company_size  log_duration_months  log_n_data_eng  \
-0       True          3.401197             0.693147        1.098612   
-1       True          3.465736             0.693147        1.386294   
-2       True          3.401197             1.386294        0.693147   
-3       True          3.526361             1.609438        1.386294   
-4       True          3.367296             0.693147        1.098612   
-
-   log_n_integrations  log_n_rows  log_n_support_tickets  log_n_users  \
-0            1.791759    7.604894               1.386294     1.098612   
-1            1.609438    9.052399               0.693147     0.693147   
-2            1.386294    8.929170               0.693147     0.693147   
-3            1.609438    8.363342               0.693147     0.693147   
-4            1.386294    7.667158               0.000000     0.693147   
-
-   log_n_workflows  
-0         1.609438  
-1         1.386294  
-2         1.609438  
-3         1.386294  
-4         1.098612  
-```
-
-
-
 
 
 
@@ -1282,8 +1033,6 @@ def predict_ensemble(customers_table, linear_pred_table, tree_pred_table):
     return customers_table.assign(
         prob_churn = linear_pred_table.join(tree_pred_table).mean(axis=1))
 ```
-**Output:**
-
 
 
 
@@ -1305,8 +1054,6 @@ linear_pred_table = predict_linear(features_table)
 tree_pred_table = predict_tree(features_table)
 churn_table = predict_ensemble(customers_table, linear_pred_table, tree_pred_table)
 ```
-**Output:**
-
 
 
 
@@ -1329,19 +1076,7 @@ churn_table.get().head()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1440,31 +1175,6 @@ churn_table.get().head()
 </table>
 </div>
 
-```
-   cust_id  n_workflows  n_rows  n_users  company_size  n_integrations  \
-0        0            4    2007        2            29               5   
-1        1            3    8538        1            31               4   
-2        2            4    7548        1            29               3   
-3        3            3    4286        1            33               4   
-4        4            2    2136        1            28               3   
-
-   n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                3.0              1.0                False         2.0   
-1                1.0              1.0                False         3.0   
-2                1.0              3.0                False         1.0   
-3                1.0              4.0                False         3.0   
-4                0.0              1.0                False         2.0   
-
-   using_dbt  prob_churn  
-0       True    0.076126  
-1       True    0.143632  
-2       True    0.161187  
-3       True    0.141960  
-4       True    0.161899  
-```
-
-
-
 
 
 
@@ -1488,8 +1198,6 @@ A Aqueduct `check` takes in a DataFrame and returns a boolean indicating whether
 def not_too_much_churn(df: pd.DataFrame): 
     return df['prob_churn'].mean() < 0.4
 ```
-**Output:**
-
 
 
 
@@ -1511,8 +1219,6 @@ check_result = not_too_much_churn(churn_table)
 # Verify that the check passed
 assert check_result.get()
 ```
-**Output:**
-
 
 
 
@@ -1535,8 +1241,6 @@ First we save the table back to the data warehouse that contains the original cu
 ```python
 churn_table.save(warehouse.config(table='pred_churn', update_mode='replace'))
 ```
-**Output:**
-
 
 
 
@@ -1584,8 +1288,6 @@ Here we are going to load `google_sheets_integration` and also write our results
 google_sheets_integration = client.integration('google_sheets/example_integration')
 churn_table.save(google_sheets_integration.config(filepath='predictions/churn_pred.csv', save_mode='overwrite'))
 ```
-**Output:**
-
 
 
 
@@ -1613,8 +1315,6 @@ churn_flow = client.publish_flow(
 )
 print(churn_flow.id())
 ```
-**Output:**
-
 
 
 
@@ -1661,8 +1361,6 @@ In some settings, you may want to use code (transformations) that are managed in
 ```python
 gh = client.github(repo="aqueductai/aqueduct", branch="main")
 ```
-**Output:**
-
 
 
 
@@ -1673,8 +1371,6 @@ gh = client.github(repo="aqueductai/aqueduct", branch="main")
 ```python
 log_op = gh.op("sdk/examples/churn_prediction/operators", entry_point="utils.py", method="log_featurize", class_name = "")
 ```
-**Output:**
-
 
 
 
@@ -1688,19 +1384,7 @@ features_table.get().head()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1835,54 +1519,11 @@ features_table.get().head()
 </table>
 </div>
 
-```
-   n_workflows  n_rows  n_users  company_size  n_integrations  \
-0            4    2007        2            29               5   
-1            3    8538        1            31               4   
-2            4    7548        1            29               3   
-3            3    4286        1            33               4   
-4            2    2136        1            28               3   
-
-   n_support_tickets  duration_months  using_deep_learning  n_data_eng  \
-0                3.0              1.0                False         2.0   
-1                1.0              1.0                False         3.0   
-2                1.0              3.0                False         1.0   
-3                1.0              4.0                False         3.0   
-4                0.0              1.0                False         2.0   
-
-   using_dbt  log_company_size  log_duration_months  log_n_data_eng  \
-0       True          3.401197             0.693147        1.098612   
-1       True          3.465736             0.693147        1.386294   
-2       True          3.401197             1.386294        0.693147   
-3       True          3.526361             1.609438        1.386294   
-4       True          3.367296             0.693147        1.098612   
-
-   log_n_integrations  log_n_rows  log_n_support_tickets  log_n_users  \
-0            1.791759    7.604894               1.386294     1.098612   
-1            1.609438    9.052399               0.693147     0.693147   
-2            1.386294    8.929170               0.693147     0.693147   
-3            1.609438    8.363342               0.693147     0.693147   
-4            1.386294    7.667158               0.000000     0.693147   
-
-   log_n_workflows  
-0         1.609438  
-1         1.386294  
-2         1.609438  
-3         1.386294  
-4         1.098612  
-```
-
-
-
 
 
 
 <!-- ------------- New Cell ------------ -->
 
 
-```python
-
-```
-**Output:**
 
 

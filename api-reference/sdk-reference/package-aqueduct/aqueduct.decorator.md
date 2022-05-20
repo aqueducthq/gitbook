@@ -1,3 +1,11 @@
+# Table of Contents
+
+* [aqueduct.decorator](#aqueduct.decorator)
+  * [wrap\_spec](#aqueduct.decorator.wrap_spec)
+  * [op](#aqueduct.decorator.op)
+  * [metric](#aqueduct.decorator.metric)
+  * [check](#aqueduct.decorator.check)
+
 <a id="aqueduct.decorator"></a>
 
 # aqueduct.decorator

@@ -1,3 +1,11 @@
+# Table of Contents
+
+* [aqueduct.integrations.google\_sheets\_integration](#aqueduct.integrations.google_sheets_integration)
+  * [GoogleSheetsIntegration](#aqueduct.integrations.google_sheets_integration.GoogleSheetsIntegration)
+    * [spreadsheet](#aqueduct.integrations.google_sheets_integration.GoogleSheetsIntegration.spreadsheet)
+    * [config](#aqueduct.integrations.google_sheets_integration.GoogleSheetsIntegration.config)
+    * [describe](#aqueduct.integrations.google_sheets_integration.GoogleSheetsIntegration.describe)
+
 <a id="aqueduct.integrations.google_sheets_integration"></a>
 
 # aqueduct.integrations.google\_sheets\_integration

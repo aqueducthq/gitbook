@@ -18,8 +18,6 @@ This is a short example of how to use the Aqueduct Platform to deploy a sentimen
 import aqueduct 
 from aqueduct.decorator import op, check
 ```
-**Output:**
-
 
 
 
@@ -33,8 +31,6 @@ api_key = "<your_api_key>"
 # You can use localhost if you're running this notebook on the same machine as your server.
 address = "<your_server_address>"
 ```
-**Output:**
-
 
 
 
@@ -45,8 +41,6 @@ address = "<your_server_address>"
 ```python
 client = aqueduct.Client(api_key, )
 ```
-**Output:**
-
 
 
 
@@ -66,8 +60,6 @@ client = aqueduct.Client(api_key, )
 warehouse = client.integration("aqueduct_demo")
 reviews_table = warehouse.sql("select * from hotel_reviews;")
 ```
-**Output:**
-
 
 
 
@@ -80,19 +72,7 @@ reviews_table.get()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -186,38 +166,6 @@ reviews_table.get()
 <p>100 rows × 4 columns</p>
 </div>
 
-```
-                          hotel_name review_date reviewer_nationality  \
-0                          H10 Itaca  2017-08-03           Australia    
-1            De Vere Devonport House  2016-03-28      United Kingdom    
-2                Ramada Plaza Milano  2016-05-15              Kosovo    
-3                 Aloft London Excel  2016-11-05              Canada    
-4   The Student Hotel Amsterdam City  2016-07-31           Australia    
-..                               ...         ...                  ...   
-95          The Chesterfield Mayfair  2015-08-25             Denmark    
-96                  Hotel V Nesplein  2015-08-27              Turkey    
-97      Le Parisis Paris Tour Eiffel  2015-10-20           Australia    
-98       NH Amsterdam Museum Quarter  2016-01-26             Belgium    
-99                      Barcel Raval  2017-07-07      United Kingdom    
-
-                                               review  
-0    Damaged bathroom shower screen sealant and ti...  
-1   No Negative The location and the hotel was ver...  
-2   No Negative Im a frequent traveler i visited m...  
-3   Only tepid water for morning shower They said ...  
-4   No Negative The hotel had free gym table tenni...  
-..                                                ...  
-95     Bad Reading light And light in bathNo Positive  
-96  Nothing except the construction going on the s...  
-97  When we arrived we had to bring our own baggag...  
-98   No stairs even to go the first floor Restaura...  
-99   Air conditioning a little zealous Nice atmosp...  
-
-[100 rows x 4 columns]
-```
-
-
-
 
 
 
@@ -244,8 +192,6 @@ def sentiment_prediction(reviews):
     model = pipeline("sentiment-analysis")
     return reviews.join(pd.DataFrame(model(list(reviews['review']))))
 ```
-**Output:**
-
 
 
 
@@ -256,8 +202,6 @@ def sentiment_prediction(reviews):
 ```python
 sentiment_table = sentiment_prediction(reviews_table)
 ```
-**Output:**
-
 
 
 
@@ -278,19 +222,7 @@ sentiment_table.get()
 ```
 **Output:**
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -408,38 +340,6 @@ sentiment_table.get()
 <p>100 rows × 6 columns</p>
 </div>
 
-```
-                          hotel_name review_date reviewer_nationality  \
-0                          H10 Itaca  2017-08-03           Australia    
-1            De Vere Devonport House  2016-03-28      United Kingdom    
-2                Ramada Plaza Milano  2016-05-15              Kosovo    
-3                 Aloft London Excel  2016-11-05              Canada    
-4   The Student Hotel Amsterdam City  2016-07-31           Australia    
-..                               ...         ...                  ...   
-95          The Chesterfield Mayfair  2015-08-25             Denmark    
-96                  Hotel V Nesplein  2015-08-27              Turkey    
-97      Le Parisis Paris Tour Eiffel  2015-10-20           Australia    
-98       NH Amsterdam Museum Quarter  2016-01-26             Belgium    
-99                      Barcel Raval  2017-07-07      United Kingdom    
-
-                                               review     label     score  
-0    Damaged bathroom shower screen sealant and ti...  POSITIVE  0.715812  
-1   No Negative The location and the hotel was ver...  POSITIVE  0.999741  
-2   No Negative Im a frequent traveler i visited m...  POSITIVE  0.999773  
-3   Only tepid water for morning shower They said ...  NEGATIVE  0.999169  
-4   No Negative The hotel had free gym table tenni...  NEGATIVE  0.931378  
-..                                                ...       ...       ...  
-95     Bad Reading light And light in bathNo Positive  NEGATIVE  0.999340  
-96  Nothing except the construction going on the s...  POSITIVE  0.999691  
-97  When we arrived we had to bring our own baggag...  NEGATIVE  0.999032  
-98   No stairs even to go the first floor Restaura...  POSITIVE  0.996806  
-99   Air conditioning a little zealous Nice atmosp...  POSITIVE  0.999748  
-
-[100 rows x 6 columns]
-```
-
-
-
 
 
 
@@ -458,8 +358,6 @@ Saving the predictions back to the data warehouse.
 ```python
 sentiment_table.save(warehouse.config(table='sentiment_pred', update_mode='replace'))
 ```
-**Output:**
-
 
 
 
@@ -480,8 +378,6 @@ sentiment_flow = client.publish_flow(name = "Demo Customer Sentiment",
                                    artifacts = [sentiment_table],
                                    schedule = aqueduct.hourly())
 ```
-**Output:**
-
 
 
 
@@ -489,9 +385,5 @@ sentiment_flow = client.publish_flow(name = "Demo Customer Sentiment",
 <!-- ------------- New Cell ------------ -->
 
 
-```python
-
-```
-**Output:**
 
 

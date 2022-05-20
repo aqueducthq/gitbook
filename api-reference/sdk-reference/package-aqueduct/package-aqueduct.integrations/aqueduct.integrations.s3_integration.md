@@ -1,3 +1,11 @@
+# Table of Contents
+
+* [aqueduct.integrations.s3\_integration](#aqueduct.integrations.s3_integration)
+  * [S3Integration](#aqueduct.integrations.s3_integration.S3Integration)
+    * [file](#aqueduct.integrations.s3_integration.S3Integration.file)
+    * [config](#aqueduct.integrations.s3_integration.S3Integration.config)
+    * [describe](#aqueduct.integrations.s3_integration.S3Integration.describe)
+
 <a id="aqueduct.integrations.s3_integration"></a>
 
 # aqueduct.integrations.s3\_integration

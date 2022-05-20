@@ -1,3 +1,10 @@
+# Table of Contents
+
+* [aqueduct.integrations.integration](#aqueduct.integrations.integration)
+  * [IntegrationInfo](#aqueduct.integrations.integration.IntegrationInfo)
+    * [describe](#aqueduct.integrations.integration.IntegrationInfo.describe)
+  * [Integration](#aqueduct.integrations.integration.Integration)
+
 <a id="aqueduct.integrations.integration"></a>
 
 # aqueduct.integrations.integration

@@ -1,3 +1,12 @@
+# Table of Contents
+
+* [aqueduct.table\_artifact](#aqueduct.table_artifact)
+  * [TableArtifact](#aqueduct.table_artifact.TableArtifact)
+    * [get](#aqueduct.table_artifact.TableArtifact.get)
+    * [save](#aqueduct.table_artifact.TableArtifact.save)
+    * [describe](#aqueduct.table_artifact.TableArtifact.describe)
+    * [remove\_check](#aqueduct.table_artifact.TableArtifact.remove_check)
+
 <a id="aqueduct.table_artifact"></a>
 
 # aqueduct.table\_artifact

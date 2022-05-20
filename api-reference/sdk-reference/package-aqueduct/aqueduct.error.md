@@ -1,3 +1,9 @@
+# Table of Contents
+
+* [aqueduct.error](#aqueduct.error)
+  * [Error](#aqueduct.error.Error)
+    * [\_\_init\_\_](#aqueduct.error.Error.__init__)
+
 <a id="aqueduct.error"></a>
 
 # aqueduct.error

@@ -1,3 +1,17 @@
+# Table of Contents
+
+* [aqueduct.aqueduct\_client](#aqueduct.aqueduct_client)
+  * [Client](#aqueduct.aqueduct_client.Client)
+    * [\_\_init\_\_](#aqueduct.aqueduct_client.Client.__init__)
+    * [github](#aqueduct.aqueduct_client.Client.github)
+    * [list\_integrations](#aqueduct.aqueduct_client.Client.list_integrations)
+    * [integration](#aqueduct.aqueduct_client.Client.integration)
+    * [publish\_flow](#aqueduct.aqueduct_client.Client.publish_flow)
+    * [trigger](#aqueduct.aqueduct_client.Client.trigger)
+    * [delete\_flow](#aqueduct.aqueduct_client.Client.delete_flow)
+    * [show\_dag](#aqueduct.aqueduct_client.Client.show_dag)
+    * [describe](#aqueduct.aqueduct_client.Client.describe)
+
 <a id="aqueduct.aqueduct_client"></a>
 
 # aqueduct.aqueduct\_client

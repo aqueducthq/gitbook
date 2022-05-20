@@ -1,3 +1,10 @@
+# Table of Contents
+
+* [aqueduct.check\_artifact](#aqueduct.check_artifact)
+  * [CheckArtifact](#aqueduct.check_artifact.CheckArtifact)
+    * [get](#aqueduct.check_artifact.CheckArtifact.get)
+    * [describe](#aqueduct.check_artifact.CheckArtifact.describe)
+
 <a id="aqueduct.check_artifact"></a>
 
 # aqueduct.check\_artifact

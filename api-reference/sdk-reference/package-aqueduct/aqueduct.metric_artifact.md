@@ -1,3 +1,11 @@
+# Table of Contents
+
+* [aqueduct.metric\_artifact](#aqueduct.metric_artifact)
+  * [MetricArtifact](#aqueduct.metric_artifact.MetricArtifact)
+    * [get](#aqueduct.metric_artifact.MetricArtifact.get)
+    * [bound](#aqueduct.metric_artifact.MetricArtifact.bound)
+    * [describe](#aqueduct.metric_artifact.MetricArtifact.describe)
+
 <a id="aqueduct.metric_artifact"></a>
 
 # aqueduct.metric\_artifact

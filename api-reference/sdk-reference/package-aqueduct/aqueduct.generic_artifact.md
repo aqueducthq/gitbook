@@ -1,3 +1,10 @@
+# Table of Contents
+
+* [aqueduct.generic\_artifact](#aqueduct.generic_artifact)
+  * [Artifact](#aqueduct.generic_artifact.Artifact)
+    * [id](#aqueduct.generic_artifact.Artifact.id)
+    * [name](#aqueduct.generic_artifact.Artifact.name)
+
 <a id="aqueduct.generic_artifact"></a>
 
 # aqueduct.generic\_artifact
