@@ -14,7 +14,7 @@ aqueduct server & # The & here will start this as a background process.
 aqueduct ui &
 ```
 
-This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment/).
+This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment.md).
 
 Once your server is up and running, you can start building your first workflow. We'll use the workflow that we introduced on the [welcome page](./). We prefer to write our workflows in Jupyter notebooks, but this should work fine from a regular Python interpreter as well.
 
@@ -82,5 +82,5 @@ And we're done! 🎉
 We've created our first workflow together, and you're off to the races. Here are some next steps:
 
 * Check out our [example workflows](example-workflows/) for some more Aqueduct workflows.
-* Check out our guide on [Workflows](workflows/) for a deep dive on how to define, preview, and create workflows.
+* Check out our guide on [Workflows](workflows/page-4.md) for a deep dive on how to define, preview, and create workflows.
 * Check out our documentation on [Operators](operators.md), [Artifacts](artifacts.md), and [Metrics & Checks](metrics-and-checks.md) for deep dives into creating and interacting with each.

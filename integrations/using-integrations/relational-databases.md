@@ -22,7 +22,7 @@ Once we have a connection to our database, we can simply call `.sql()` on the co
 customers = demo_db.sql('SELECT * FROM customers;')
 ```
 
-This returns what we call an [**Artifact**](../../artifacts.md) **** in Aqueduct terminology. An artifact is simply just a wrapper around some data that we'll track a part of your workflow. You can call [Operators](../../operators.md) on your artifacts -- for more on this, see the guide on [Operators](../../operators.md) or [Workflows](../../workflows/).
+This returns what we call an [**Artifact**](../../artifacts.md) **** in Aqueduct terminology. An artifact is simply just a wrapper around some data that we'll track a part of your workflow. You can call [Operators](../../operators.md) on your artifacts -- for more on this, see the guide on [Operators](../../operators.md) or [Workflows](../../workflows/page-4.md).
 
 {% hint style="warning" %}
 Every SQL database has a slightly different dialect of SQL, and Aqueduct does not check for the correctness of your query.&#x20;
