@@ -8,11 +8,11 @@ Aqueduct is open-source prediction infrastructure built for data scientists, by 
 
 For more on why we're building prediction infrastructure for data scientists see [the-aqueduct-philosophy.md](the-aqueduct-philosophy.md "mention").
 
-The 20-line code snippet below is all you need to create your first prediction pipeline:
+The 25-line code snippet below is all you need to create your first prediction pipeline:
 
 ```python
 import aqueduct as aq
-from aq.decorator import op
+from aqueduct import op, metric
 from transformers import pipeline
 import torch
 
@@ -29,14 +29,20 @@ reviews_table = demo_db.sql("select * from hotel_reviews;")
 sentiment_table = sentiment_prediction(reviews_table)
 sentiment_table.save(demo_db.config(table='sentiment_pred', update_mode='replace'))
 
+@metric
+def average_sentiment(reviews_with_sent):
+    return reviews_with_sent['review'].mean()
+avg_sent = average_sentiment(sentiment_table)
+avg_sent.bound(lower=0.5)
+
 client.publish_flow(name="hotel_sentiment", artifacts=[sentiment_table])
 ```
 
-For more on this pipeline, check our Quickstart Guide (**ADD LINK**).&#x20;
+For more on this pipeline, check our [Quickstart Guide](quickstart-guide.md).&#x20;
 
 ### Core Concepts
 
-* [Workflows](workflows/page-4.md)
+* [Workflows](workflows/)
 * [Integrations](integrations/)&#x20;
 * [Operators](operators.md)
 * [Artifacts](artifacts.md)
