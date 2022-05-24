@@ -36,10 +36,11 @@ _**Prediction infrastructure** is infrastructure built to automate the process o
 
 Aqueduct the first prediction infrastructure for data scientists.&#x20;
 
-The existing tools for deploying models are not designed with data scientists in mind -- they assume the user will casually build Docker containers, deploy Kubernetes clusters, and writes thousands of lines of YAML to deploy a single model. Data scientists are by and large not interested in doing that.&#x20;
+The existing tools for deploying models are not designed with data scientists in mind -- they assume the user will casually build Docker containers, deploy Kubernetes clusters, and writes thousands of lines of YAML to deploy a single model. 
+Data scientists are by and large not interested in doing that and there are better uses for their skills.&#x20;
 
 Aqueduct is designed for data scientists, with three core design principles in mind:
 
 * _Simplicity_: Data scientists should be able to deploy models with tools they're comfortable with and without having to learn how to use complex, low-level infrastructure systems.
 * _Connectedness_: Data science and machine learning can have the greatest impact when everyone in the business has access, and data scientists shouldn't have to bend over backwards to make this happen.
-* _Confidence_: Having the whole business benefit from your works means that data scientists should be able to sleep peacefully, knowing that things are working as expected -- and they'll be alerted as soon as that changes.&#x20;
+* _Confidence_: Having the whole organization benefit from your works means that data scientists should be able to sleep peacefully, knowing that things are working as expected -- and they'll be alerted as soon as that changes.&#x20;
