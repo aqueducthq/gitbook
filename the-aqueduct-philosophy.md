@@ -34,7 +34,7 @@ _**Prediction infrastructure** is infrastructure built to automate the process o
 
 ### Why Aqueduct?
 
-Aqueduct the first prediction infrastructure for data scientists.&#x20;
+Aqueduct is the first prediction infrastructure for data scientists.&#x20;
 
 The existing tools for deploying models are not designed with data scientists in mind -- they assume the user will casually build Docker containers, deploy Kubernetes clusters, and writes thousands of lines of YAML to deploy a single model. 
 Data scientists are by and large not interested in doing that and there are better uses for their skills.&#x20;
