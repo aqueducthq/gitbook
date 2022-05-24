@@ -6,13 +6,13 @@ description: Making data scientists heroes
 
 The last 10 years have seen an explosion in the tooling, interest, and applications of machine learning. 
 One of the key driving forces behind the broad adoption of machine learning is access to a vibrant open-source ecosystem of software for preparing data and training models. 
-From numpy, pandas, and jupyter to sklearn, xgboost, pytorch, and tensorflow, the vibrant ecosystem of Python-based data science and machine learning software has made it easier than ever to build machine learning models.
+From NumPy, Pandas, and Jupyter to scikit-learn, XGBoost, Pytorch, and Tensorflow, the vibrant ecosystem of Python-based data science and machine learning software has made it easier than ever to build machine learning models.
 
 Much of the innovation over the last 10 years has (rightly so) focused on processing and featurizing data, experimenting with different model architectures, and effectively training models. 
-This is inline with our own experiences at UC Berkeley, where the data science curriculum we've developed (www.ds100.org) teaches students the basics of SQL queries, exploratory data analysis, data preparation, modeling in SciKit-Learn and PyTorch, and model evaluation -- all within the context of a Jupyter notebook. 
+This is inline with our own experiences at UC Berkeley, where the data science curriculum we've developed ([Data100](www.ds100.org)) teaches students the basics of SQL queries, exploratory data analysis, data preparation, modeling in SciKit-Learn and PyTorch, and model evaluation -- all within the context of a Jupyter notebook. 
 
 Interestingly, while we developing the Berkeley data science curriculum, we noticed that a many of the students taking the data science courses were coming from disciplines outside of computer science and engineering.
-We believe that this new generation of highly data literate students with backgrounds in humanities and basic sciences has the opportunity to drive the broad adoption of machine learning and transform the organizations they join. 
+This new generation of highly data literate students with backgrounds in humanities and physical sciences has the opportunity to drive the broad adoption of machine learning and transform the organizations they join. 
 Yet, for them to succeed, they will need to overcome the significant engineering hurdles along the last mile of data science and machine learning: deploying, integrating, and supporting their models.
 
 
