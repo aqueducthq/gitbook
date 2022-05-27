@@ -9,7 +9,7 @@ description: The quickest way to get your first workflow deployed on Aqueduct
 First things first, we'll install the Aqueduct pip package and start the Aqueduct server and UI:
 
 ```bash
-pip3 install aqueduct
+pip3 install aqueduct-ml
 aqueduct server & # The & here will start this as a background process.
 aqueduct ui &
 ```
