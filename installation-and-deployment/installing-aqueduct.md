@@ -15,6 +15,7 @@ python3 -m pip install --upgrade pip
 
 * `npm`: the Aqueduct UI is built in Typescript and requires the Node.js package manager to be installed -- you can find instruction to install `npm` [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
   * Note that we require `npm` v16.2.0 or later
+  * If you are using a Mac and have installed [Homebrew](https://brew.sh) you can run `brew install node`.
 
 ### Installing Aqueduct
 
