@@ -1,8 +1,16 @@
 # Connecting to AWS S3
 
-{% hint style="danger" %}
-This process does not currently work with Aqueduct Community Edition.
-{% endhint %}
+## Community Edition
+
+Aqueduct Community Edition connects to AWS S3 using an [AWS IAM Access Key](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html). You can either use the Access Key for your account, or you can create a separate Access Key by following the instructions [here](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).&#x20;
+
+Ensure that your IAM user has access to the S3 Bucket you're connecting to Aqueduct. You will need the Access Key ID and the Secret Access Key. Enter the name of the bucket, the Key ID, and the Key into the S3 connection form on the Aqueduct UI and click Connect:
+
+![](<../../.gitbook/assets/image (3).png>)
+
+
+
+## Enterprise Edition
 
 Connecting Aqueduct to AWS S3 requires special configuration to manages AWS IAM (Identiy & Access Management) permissions. This guide will walk you through creating and IAM policy and an IAM role, which Aqueduct will use to connect to your S3 bucket.
 
