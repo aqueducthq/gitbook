@@ -4,18 +4,14 @@
 
 Please make sure you have the requirements before installing Aqueduct:
 
-* A Unix-based operating system: Aqueduct supports Debian and CentOS-based Linux distributions and macOS (both Intel and ARM-based Macs)&#x20;
+* A Unix-based operating system: Aqueduct supports Debian and CentOS-based Linux distributions and macOS (both Intel and ARM-based Macs)
 * Python3: Aqueduct supports Python3.7-Python3.10
-* `pip3`&#x20;
+* `pip3`
   * Note that older versions of `pip` may or may not be compatible with the latest versions of library dependencies such as `numpy` or `pandas` -- if your installation process fails, please update `pip` by running the following command:
 
 ```bash
 python3 -m pip install --upgrade pip
 ```
-
-* `npm`: the Aqueduct UI is built in Typescript and requires the Node.js package manager to be installed -- you can find instruction to install `npm` [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-  * Note that we require `npm` v16.2.0 or later
-  * If you are using a Mac and have installed [Homebrew](https://brew.sh) you can run `brew install node`.
 
 ### Installing Aqueduct
 
