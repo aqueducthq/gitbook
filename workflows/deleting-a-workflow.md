@@ -10,7 +10,7 @@ Deleting a workflow can be done from both the UI and SDK. Deleting a workflow wi
 
 On the Aqueduct UI, navigate to the settings pane by clicking on the gear icon on the top right. At the bottom of the settings pane, you will see the option to delete the workflow. This will prompt you to confirm the workflow deletion.&#x20;
 
-![](<../.gitbook/assets/image (6).png>)
+![](<../.gitbook/assets/image (6) (1).png>)
 
 After workflow deletion has succeeded, you will be redirected to the workflows page.
 

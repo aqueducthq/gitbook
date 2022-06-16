@@ -6,7 +6,7 @@ Aqueduct Community Edition connects to AWS S3 using an [AWS IAM Access Key](http
 
 Ensure that your IAM user has access to the S3 Bucket you're connecting to Aqueduct. You will need the Access Key ID and the Secret Access Key. Enter the name of the bucket, the Key ID, and the Key into the S3 connection form on the Aqueduct UI and click Connect:
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 
 

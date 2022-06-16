@@ -53,4 +53,4 @@ The workflow's ID is printed out when the workflow is created and can also be fo
 
 On the Aqueduct UI, navigate to the page for your workflow. Under the title, you should see the a button titled `Run Workflow`, which will prompt you to confirm a new workflow run.
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image (5) (1).png>)
