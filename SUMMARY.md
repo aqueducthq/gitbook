@@ -7,6 +7,7 @@
   * [Installing Aqueduct](installation-and-deployment/installing-aqueduct.md)
   * [Starting Aqueduct](installation-and-deployment/starting-aqueduct.md)
   * [Running with Anaconda](installation-and-deployment/running-with-anaconda.md)
+  * [Running with pyenv](installation-and-deployment/running-with-pyenv.md)
   * [Configuring Integrations](installation-and-deployment/configuring-integrations.md)
 * [Example Workflows](example-workflows/README.md)
   * [Demo Data Warehouse](example-workflows/demo-data-warehouse.md)
