@@ -1,6 +1,6 @@
 # Metrics: Measuring your Predictions
 
-**Metrics** are numerical measurements and summaries of a dataset in Aqueduct. Writing a metric is very similar to writing an [Operator](../operators.md) -- the only difference is that rather than returning a data Artifact, a Metric function returns a floating point number rather than another data artifact.&#x20;
+**Metrics** are numerical measurements and summaries of a dataset in Aqueduct. Writing a metric is very similar to writing an [Operator](../operators.md) -- the only difference is that rather than returning a data Artifact, a Metric function returns a floating point number.&#x20;
 
 Here's how you can create a Metric:
 

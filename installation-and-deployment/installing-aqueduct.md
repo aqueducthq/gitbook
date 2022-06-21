@@ -15,7 +15,7 @@ python3 -m pip install --upgrade pip
 
 ### Installing Aqueduct
 
-Aqueduct is packaged as a Python pip package **(TODO ADD LINK)** that you can download and install:
+Aqueduct is packaged as a [Python pip package](https://pypi.org/project/aqueduct-ml/) that you can download and install:
 
 ```bash
 pip3 install aqueduct-ml

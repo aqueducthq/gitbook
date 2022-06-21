@@ -1,5 +1,20 @@
 # Viewing Data in an Integration
 
-We're hard at work on a new feature that will show you a preview of the data in your connected integrations, but it's not quite ready yet.
+## Base Data Artifacts
+These are the data artifacts that exist in the integration that wasn't loaded there via the Aqueduct `.load` function.
+### Aqueduct UI
+These can be found in the integration details page in the UI. You can bring up the integration details page by selecting the integration of interest in the Integrations page. By selecting the base data artifact on the list, you can preview the artifact.
 
-We hope that this will help you get a sense of what data you have, how data is currently being used, and what awesome things you might be able to do next!
+&#x20;
+
+![Aqueduct's Integration Details page](<../.gitbook/assets/integrationdetails.png>)
+
+
+## User-Generated Data Artifacts
+These are the data artifacts that exist in the integration that was loaded there via the Aqueduct `.load` function.
+### Aqueduct UI
+These can be found in the data page in the UI. You can access the data page through the Data tab on the left-hand side of the UI. Selecting the data artifact allows you to view more details about the artifact.
+
+&#x20;
+
+![Aqueduct's Data page](<../.gitbook/assets/data.png>)

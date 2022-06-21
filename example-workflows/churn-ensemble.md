@@ -11,8 +11,8 @@ The philosophy behind the Aqueduct SDK is that you should be able to connect to 
 **Outline:**
 
 1. We will use standard Python libraries to transform our data and build a simple ensemble of churn models.
-2. We will use the Aqueduct Python API to deploy our churn prediction pipeline
-3. We will visit the Aqueduct web interface to view our deployed prediction pipeline
+2. We will use the Aqueduct Python API to deploy our churn prediction pipeline.
+3. We will visit the Aqueduct web interface to view our deployed prediction pipeline.
 
 ***
 
@@ -320,7 +320,7 @@ client.list_integrations()
 ```
 {'salesforce/cgwu_test': IntegrationInfo(id=UUID('bb836d75-8025-494d-8957-cfb8b40e9b32'), name='salesforce/cgwu_test', service=<ServiceType.SALESFORCE: 'Salesforce'>, createdAt=1648232933, validated=True),
  'google_sheets/example_integration': IntegrationInfo(id=UUID('296a3528-1143-4c4a-abd7-f4ac03860b76'), name='google_sheets/example_integration', service=<ServiceType.GOOGLE_SHEETS: 'Google Sheets'>, createdAt=1650481564, validated=True),
- 'spiral_demo/': IntegrationInfo(id=UUID('a6072a77-cb69-434e-846c-6d97a62e7fea'), name='spiral_demo/', service=<ServiceType.POSTGRES: 'Postgres'>, createdAt=1651017667, validated=True)}
+ 'aqueduct_demo': IntegrationInfo(id=UUID('a6072a77-cb69-434e-846c-6d97a62e7fea'), name='aqueduct_demo, service=<ServiceType.POSTGRES: 'Postgres'>, createdAt=1651017667, validated=True)}
 ```
 
 Here we are going to load `google_sheets_integration` and also write our results there.
@@ -353,7 +353,7 @@ Great, we're done! You can go on over to the Aqueduct UI now at `{your_server_ad
 
 and you should see a new workflow called `Demo Churn Ensemble`. It might take a minute or two to get up and running, but once that's done, you'll be able to click around the different stages of the workflow and see the intermediary results at each stage, trigger new runs, and see previous versions.
 
-Please let us know if you have any questions. We'd love to hear from you: hello@aqueducthq.com.
+Please let us know if you have any questions. We'd love to hear from you: [hello@aqueducthq.com](mailto:hello@aqueducthq.com).
 
 \
 \

@@ -25,7 +25,7 @@ def sentiment_prediction(reviews):
 
 client = aq.AqueductClient("YOUR_API_KEY")
 
-demo_db = client.integration("aqueduct_demo/")
+demo_db = client.integration("aqueduct_demo")
 reviews_table = demo_db.sql("select * from hotel_reviews;")
 
 sentiment_table = sentiment_prediction(reviews_table)

@@ -9,11 +9,11 @@ This guide assumes you've already created an Aqueduct API client. If you haven't
 At the root of every workflow is some data. Aqueduct supports loading input data from a variety of sources, but we've found the most common use case is a workflow that starts from a SQL database. We'll use Aqueduct's [demo-data-warehouse.md](../example-workflows/demo-data-warehouse.md "mention") in this example.
 
 ```python
-db = client.integration('aqueduct_demo/')
+db = client.integration('aqueduct_demo')
 wine_data = db.sql('SELECT * FROM wine;')
 ```
 
-In the snippet above, we've done two things -- first, we've loaded a connection to the `aqueduct_demo` database. This allows us to access any of the data stored in that database iva SQL queries, which is what we do on line 2 -- execute a simple SQL query against `aqueduct_demo`.&#x20;
+In the snippet above, we've done two things -- first, we've loaded a connection to the `aqueduct_demo` database. This allows us to access any of the data stored in that database via SQL queries, which is what we do on line 2 -- execute a simple SQL query against `aqueduct_demo`.&#x20;
 
 Once we have some data, now we can start transforming it. Here, we're going to do something really simple -- we'll take the total acidity of each wine (`volatile_acidity` and `fixed_acidity`) and then we'll calculate the average acidity for each `color` of wine. (If this is a _faux pas_ for wine enthusiasts, forgive us -- we're just trying to make up fun examples with interesting data).&#x20;
 
