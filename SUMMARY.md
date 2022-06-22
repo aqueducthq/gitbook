@@ -64,6 +64,7 @@
       * [aqueduct.error](api-reference/sdk-reference/package-aqueduct/aqueduct.error.md)
       * [aqueduct.enums](api-reference/sdk-reference/package-aqueduct/aqueduct.enums.md)
       * [aqueduct.decorator](api-reference/sdk-reference/package-aqueduct/aqueduct.decorator.md)
+      * [aqueduct.param\_artifact](api-reference/sdk-reference/package-aqueduct/aqueduct.param\_artifact.md)
       * [aqueduct.check\_artifact](api-reference/sdk-reference/package-aqueduct/aqueduct.check\_artifact.md)
 * [Guides](guides/README.md)
   * [Debugging a Failed Workflow](guides/debugging-a-failed-workflow.md)
