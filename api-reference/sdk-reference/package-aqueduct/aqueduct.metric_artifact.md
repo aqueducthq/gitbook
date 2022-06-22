@@ -3,6 +3,7 @@
 * [aqueduct.metric\_artifact](#aqueduct.metric_artifact)
   * [MetricArtifact](#aqueduct.metric_artifact.MetricArtifact)
     * [get](#aqueduct.metric_artifact.MetricArtifact.get)
+    * [list\_preset\_checks](#aqueduct.metric_artifact.MetricArtifact.list_preset_checks)
     * [bound](#aqueduct.metric_artifact.MetricArtifact.bound)
     * [describe](#aqueduct.metric_artifact.MetricArtifact.describe)
 
@@ -39,7 +40,7 @@ return this class when that function is called.
 #### get
 
 ```python
-def get() -> float
+def get(parameters: Optional[Dict[str, Any]] = None) -> float
 ```
 
 Materializes a MetricArtifact into its immediate float value.
@@ -56,6 +57,21 @@ Materializes a MetricArtifact into its immediate float value.
   InternalServerError:
   An unexpected error occurred within the Aqueduct cluster.
 
+<a id="aqueduct.metric_artifact.MetricArtifact.list_preset_checks"></a>
+
+#### list\_preset\_checks
+
+```python
+def list_preset_checks() -> List[str]
+```
+
+Returns a list of all preset checks available on the metric artifact.
+These preset checks can be set via the bound() method on a artifact.
+
+**Returns**:
+
+  A list of available preset checks on a metric
+
 <a id="aqueduct.metric_artifact.MetricArtifact.bound"></a>
 
 #### bound
@@ -63,6 +79,8 @@ Materializes a MetricArtifact into its immediate float value.
 ```python
 def bound(upper: Optional[float] = None,
           lower: Optional[float] = None,
+          equal: Optional[float] = None,
+          notequal: Optional[float] = None,
           severity: CheckSeverity = CheckSeverity.WARNING) -> CheckArtifact
 ```
 

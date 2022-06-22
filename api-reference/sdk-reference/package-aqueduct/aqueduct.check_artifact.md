@@ -40,7 +40,7 @@ is returned from pre-defined functions like metric.bound(...).
 #### get
 
 ```python
-def get() -> bool
+def get(parameters: Optional[Dict[str, Any]] = None) -> bool
 ```
 
 Materializes a CheckArtifact into a boolean.

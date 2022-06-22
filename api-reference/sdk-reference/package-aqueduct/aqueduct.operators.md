@@ -2,6 +2,7 @@
 
 * [aqueduct.operators](#aqueduct.operators)
   * [GithubMetadata](#aqueduct.operators.GithubMetadata)
+  * [serialize\_parameter\_value](#aqueduct.operators.serialize_parameter_value)
 
 <a id="aqueduct.operators"></a>
 
@@ -22,4 +23,14 @@ There are two ways to specify the content:
     information stored in the repo's `.aqconfig`.
 If using `repo_config` content, backend will ignore `path` and overwrite it with
 the `path` specified in `.aqconfig`.
+
+<a id="aqueduct.operators.serialize_parameter_value"></a>
+
+#### serialize\_parameter\_value
+
+```python
+def serialize_parameter_value(name: str, val: Any) -> str
+```
+
+A parameter must be JSON serializable.
 

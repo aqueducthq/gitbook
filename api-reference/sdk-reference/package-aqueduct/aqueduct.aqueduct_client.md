@@ -1,9 +1,11 @@
 # Table of Contents
 
 * [aqueduct.aqueduct\_client](#aqueduct.aqueduct_client)
+  * [get\_apikey](#aqueduct.aqueduct_client.get_apikey)
   * [Client](#aqueduct.aqueduct_client.Client)
     * [\_\_init\_\_](#aqueduct.aqueduct_client.Client.__init__)
     * [github](#aqueduct.aqueduct_client.Client.github)
+    * [create\_param](#aqueduct.aqueduct_client.Client.create_param)
     * [list\_integrations](#aqueduct.aqueduct_client.Client.list_integrations)
     * [integration](#aqueduct.aqueduct_client.Client.integration)
     * [publish\_flow](#aqueduct.aqueduct_client.Client.publish_flow)
@@ -15,6 +17,20 @@
 <a id="aqueduct.aqueduct_client"></a>
 
 # aqueduct.aqueduct\_client
+
+<a id="aqueduct.aqueduct_client.get_apikey"></a>
+
+#### get\_apikey
+
+```python
+def get_apikey() -> str
+```
+
+Get the API key if the server is running locally.
+
+**Returns**:
+
+  The API key.
 
 <a id="aqueduct.aqueduct_client.Client"></a>
 
@@ -43,7 +59,7 @@ Creates an instance of Client.
   api_key:
   The user unique API key provided by Aqueduct.
   aqueduct_address:
-  The address of the Aqueduct Gateway service.
+  The address of the Aqueduct Server service.
   log_level:
   A indication of what level and above to print logs from the sdk.
   Defaults to printing error and above only. Types defined in: https://docs.python.org/3/howto/logging.html
@@ -77,6 +93,35 @@ Github account to your Aqueduct account.
 **Returns**:
 
   A github integration object linked to the repo and branch.
+
+<a id="aqueduct.aqueduct_client.Client.create_param"></a>
+
+#### create\_param
+
+```python
+def create_param(name: str,
+                 default: Any,
+                 description: str = "") -> ParamArtifact
+```
+
+Creates a parameter artifact that can be fed into other operators.
+
+Parameter values are configurable at runtime.
+
+**Arguments**:
+
+  name:
+  The name to assign this parameter.
+  default:
+  The default value to give this parameter, if no value is provided.
+  Every parameter must have a default.
+  description:
+  A description of what this parameter represents.
+  
+
+**Returns**:
+
+  A parameter artifact.
 
 <a id="aqueduct.aqueduct_client.Client.list_integrations"></a>
 
@@ -177,7 +222,8 @@ to this new state.
 #### trigger
 
 ```python
-def trigger(flow_id: Union[str, uuid.UUID]) -> None
+def trigger(flow_id: Union[str, uuid.UUID],
+            parameters: Optional[Dict[str, Any]] = None) -> None
 ```
 
 Immediately triggers another run of the provided flow.
@@ -186,6 +232,11 @@ Immediately triggers another run of the provided flow.
 
   flow_id:
   The id of the workflow to delete (not the name)
+  parameters:
+  A map containing custom values to use for the designated parameters. The mapping
+  is expected to be from parameter name to the custom value. These custom values
+  are not persisted to the workflow. To actually change the default parameter values
+  edit the workflow itself through `client.publish_flow()`.
   
 
 **Raises**:
