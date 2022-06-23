@@ -11,7 +11,7 @@ By selecting the base data artifact on the list of base tables for the integrati
 
 &#x20;
 
-![Aqueduct's Integration Details page](<../.gitbook/assets/integrationdetails.png>)
+![Aqueduct's Integration Details page](<../.gitbook/assets/integration_details.png>)
 
 
 ## User-Generated Data Artifacts

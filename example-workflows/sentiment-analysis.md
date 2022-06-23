@@ -39,7 +39,7 @@ address = "<your_server_address>"
 
 
 ```python
-client = aqueduct.Client(api_key, )
+client = aqueduct.Client(api_key, address)
 ```
 
 
@@ -377,6 +377,7 @@ Publishing the flow to run every hour.
 sentiment_flow = client.publish_flow(name = "Demo Customer Sentiment", 
                                    artifacts = [sentiment_table],
                                    schedule = aqueduct.hourly())
+print(sentiment_flow.id())
 ```
 
 
