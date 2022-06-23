@@ -2,10 +2,10 @@
 
 Editing a workflow is very similar to [creating-a-workflow.md](creating-a-workflow.md "mention"). After defining your workflow from the SDK, you can simply call `publish_flow` with the same workflow name, and Aqueduct will automatically update your previous workflow spec to reflect the latest change.&#x20;
 
-Let's say for example that we wanted to update the workflow we created in the [creating-a-workflow.md](creating-a-workflow.md "mention") guide. We decided we didn't care about `fixed_acidity` anymore but only want to consider the `volatile_acidity`. We could run the following code snippet to define the udpated workflow and publish it:
+Let's say for example that we wanted to update the workflow we created in the [creating-a-workflow.md](creating-a-workflow.md "mention") guide. We decided we didn't care about `fixed_acidity` anymore but only want to consider the `volatile_acidity`. We could run the following code snippet to define the updated workflow and publish it:
 
 ```python
-db = client.integration('aqueduct_demo/')
+db = client.integration('aqueduct_demo')
 wine_data = db.sql('SELECT * FROM wine;')
 
 @op

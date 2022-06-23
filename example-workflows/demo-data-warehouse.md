@@ -29,7 +29,7 @@ To make it easy for you to get started and play around with Aqueduct, every Aque
     SELECT hotel_name, review_date, reviewer_nationality, review
     FROM hotel_reviews;
     ```
-*   **customers**: Synthetic data capturing features about Spiral customers, including how many data scientists they have and whether or not they use dbt.
+*   **customers**: Synthetic data capturing features about Aqueduct customers, including how many data scientists they have and whether or not they use dbt.
 
     ```sql
     SELECT cust_id, n_workflows, n_rows, n_users, company_size, n_integrations, 
