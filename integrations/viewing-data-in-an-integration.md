@@ -3,7 +3,11 @@
 ## Base Data Artifacts
 These are the data artifacts that exist in the integration that wasn't loaded there via the Aqueduct `.load` function.
 ### Aqueduct UI
-These can be found in the integration details page in the UI. You can bring up the integration details page by selecting the integration of interest in the Integrations page. By selecting the base data artifact on the list, you can preview the artifact.
+These can be found in the integration details page in the UI. You can bring up the integration details page by:
+1. Navigate to the Integrations page via the tab labeled "Integrations" in the left side pane.
+2. Select the integration of interest from the list of connected integrations in the Integrations page.
+3. You have landed on the Integration Details page for the integration you selected.
+By selecting the base data artifact on the list of base tables for the integration, you can preview the artifact.
 
 &#x20;
 
