@@ -51,7 +51,7 @@ At this point, you should be ready to go and can create your first workflow. You
 
 ```python
 from aqueduct import AqueductClient
-client = AqueductClient("<YOUR_API_KEY>", 'localhost:8080')
+client = AqueductClient("<YOUR_API_KEY>", "localhost:8080")
 ```
 
 For more details on creating a workflow, see our [Quickstart Guide](../quickstart-guide.md) or our list of [example workflows](../example-workflows/).

@@ -33,8 +33,8 @@ Each Check can have one of two severity levels -- `WARNING` and `ERROR`:
 
 A [Metric](../metrics-and-checks.md) is a measurement of a workflow (see the Metrics documentation for more details):
 
-{% content-ref url="metrics-measuring-your-predictions.md" %}
-[metrics-measuring-your-predictions.md](metrics-measuring-your-predictions.md)
+{% content-ref url="metrics-measuring-your-predictions/" %}
+[metrics-measuring-your-predictions](metrics-measuring-your-predictions/)
 {% endcontent-ref %}
 
 A common type of Check to create when writing a workflow is to enforce a bound on a `Metric` -- for example, we as a part of the [churn-ensemble.md](../example-workflows/churn-ensemble.md "mention") workflow, we might create a metric that measures what percentage of our customers are likely to churn off of our service.&#x20;

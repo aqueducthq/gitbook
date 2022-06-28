@@ -60,12 +60,13 @@ Now that we have a the sentiment analysis models, we can get a preview of our da
 sentiment_table.get()
 ```
 
-Next, we're going to apply a [Metric](metrics-and-checks/metrics-measuring-your-predictions.md) to our `sentiment_table`, which will calculate a numerical summary of our predictions (in this case, just the mean sentiment). We will also a apply a bound (which is a type of [Check](metrics-and-checks/checks-ensuring-correctness.md)) to our Metric -- if the average sentiment drops below 0.5, we will raise an error:
+Next, we're going to apply a [Metric](metrics-and-checks/metrics-measuring-your-predictions/) to our `sentiment_table`, which will calculate a numerical summary of our predictions (in this case, just the mean sentiment). We will also a apply a bound (which is a type of [Check](metrics-and-checks/checks-ensuring-correctness.md)) to our Metric -- if the average sentiment drops below 0.5, we will raise an error:
 
 ```python
 @metric
 def average_sentiment(reviews_with_sent):
-    return reviews_with_sent['review'].mean()
+    return (reviews_with_sent["label"] == "POSITIVE").mean()
+
 avg_sent = average_sentiment(sentiment_table)
 avg_sent.bound(lower=0.5)
 ```
