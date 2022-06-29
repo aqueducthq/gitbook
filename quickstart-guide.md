@@ -9,19 +9,20 @@ description: The quickest way to get your first workflow deployed on Aqueduct
 First things first, we'll install the Aqueduct pip package and start the Aqueduct server and UI:
 
 ```bash
-pip3 install aqueduct-ml
-aqueduct server & # The & here will start this as a background process.
-aqueduct ui &
+pip3 install aqueduct-ml torch transformers
+aqueduct start & # The & here will start this as a background process.
 ```
 
-This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment.md).
+This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment.md). 
 
 Once your server is up and running, you can start building your first workflow. We'll use the workflow that we introduced on the [welcome page](./). We prefer to write our workflows in Jupyter notebooks, but this should work fine from a regular Python interpreter as well.
 
 First, we'll import everything we need:
 
 ```python
-from aqueduct import AqueductClient, op, metric
+from aqueduct import Client, op, metric
+
+import pandas as pd
 from transformers import pipeline
 import torch
 ```
@@ -31,8 +32,10 @@ Note that the `transformers` package uses `torch`, so even though we won't expli
 Next, we'll create our API client:
 
 ```python
-client = AqueductClient.("YOUR_API_KEY", "localhost:8080")
+client = Client.("YOUR_API_KEY", "localhost:8080")
 ```
+
+Note that the API key associated with the server can be found in the output of the `aqueduct start &` command. You can also retrieve it by running `aqueduct apikey` from your terminal.
 
 And access the base data for our workflow, which is the [hotel reviews dataset](example-workflows/demo-data-warehouse.md). This code does two things -- (1) it loads a connection to a database (in this case the pre-build `aqueduct_demo` DB that comes with the Aqueduct server), and (2) it runs a SQL query against that DB and returns a pointer to the resulting dataset.
 
