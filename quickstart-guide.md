@@ -10,7 +10,7 @@ First things first, we'll install the Aqueduct pip package and start the Aqueduc
 
 ```bash
 pip3 install aqueduct-ml torch transformers
-aqueduct start & # The & here will start this as a background process.
+aqueduct start
 ```
 
 This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment.md). 
@@ -20,7 +20,7 @@ Once your server is up and running, you can start building your first workflow. 
 First, we'll import everything we need:
 
 ```python
-from aqueduct import Client, op, metric
+from aqueduct import Client, get_apikey, op, metric
 
 import pandas as pd
 from transformers import pipeline
@@ -32,10 +32,10 @@ Note that the `transformers` package uses `torch`, so even though we won't expli
 Next, we'll create our API client:
 
 ```python
-client = Client.("YOUR_API_KEY", "localhost:8080")
+client = Client.(get_apikey(), "localhost:8080")
 ```
 
-Note that the API key associated with the server can be found in the output of the `aqueduct start &` command. You can also retrieve it by running `aqueduct apikey` from your terminal.
+Note that the API key associated with the server can also be found in the output of the `aqueduct start` command.
 
 And access the base data for our workflow, which is the [hotel reviews dataset](example-workflows/demo-data-warehouse.md). This code does two things -- (1) it loads a connection to a database (in this case the pre-build `aqueduct_demo` DB that comes with the Aqueduct server), and (2) it runs a SQL query against that DB and returns a pointer to the resulting dataset.
 
