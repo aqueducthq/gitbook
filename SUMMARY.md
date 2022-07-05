@@ -35,6 +35,7 @@
   * [File Dependencies in Python](operators/file-dependencies-in-python.md)
   * [Specifying a requirements.txt](operators/specifying-a-requirements.txt.md)
   * [Using Extract & Load Operators](operators/using-extract-and-load-operators.md)
+  * [Using Workflow Parameters](workflow-parameters.md)
 * [Artifacts](artifacts.md)
   * [Saving an Artifact](artifacts/saving-an-artifact.md)
 * [Metrics & Checks](metrics-and-checks.md)
