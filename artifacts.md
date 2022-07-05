@@ -6,7 +6,7 @@ description: Encapsulating data in Aqueduct
 
 _Artifacts_ are thin wrappers around data objects in Aqueduct. Wrapping data in an Artifact allows Aqueduct to track that artifact across workflow runs help you understand how your data is changing over time.&#x20;
 
-Aqueduct currently supports **TableArtifacts**, which are encapsulations of tabular or relational data, and [**ParameterArtifacts**](workflow-parameters.md), which wrap mutable json values. We plan to add support for other data types in the future.
+Aqueduct currently supports **TableArtifacts**, which are encapsulations of tabular or relational data, and [**ParameterArtifacts**](workflows/parameterizing-a-workflow.md), which wrap mutable json values. We plan to add support for other data types in the future.
 
 There are three operations that can be done on artifacts:
 
