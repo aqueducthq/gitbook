@@ -99,6 +99,7 @@ For more on this pipeline, check our [Quickstart Guide](quickstart-guide.md).
 * [Churn Ensemble](example-workflows/churn-ensemble.md)
 * [Wine Quality Prediction](example-workflows/train-and-inference.md)
 * [Sentiment Analysis](example-workflows/sentiment-analysis.md)
+* [Using Workflow Parameters](example-workflows/using-workflow-parameters.md)
 * Product Recommendation (coming soon!)
 
 ### Guides

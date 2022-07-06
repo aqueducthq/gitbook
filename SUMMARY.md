@@ -19,7 +19,7 @@
   * [Workflow Versions](workflows/workflow-versions.md)
   * [Managing Workflow Schedules](workflows/managing-workflow-schedules.md)
   * [Editing a Workflow](workflows/editing-a-workflow.md)
-  * [Parametrizing a Workflow](workflows/parametrizing-a-workflow.md)
+  * [Parameterizing a Workflow](workflows/parameterizing-a-workflow.md)
   * [Deleting a Workflow](workflows/deleting-a-workflow.md)
 * [Integrations](integrations/README.md)
   * [Adding an Integration](integrations/adding-an-integration/README.md)
