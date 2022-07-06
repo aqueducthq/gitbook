@@ -13,7 +13,7 @@ pip3 install aqueduct-ml torch transformers
 aqueduct start
 ```
 
-This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment.md). 
+This will start the backend and UI servers for Aqueduct -- if you have questions or issues with the installation process, please check out our [Installation Guide](installation-and-deployment.md).
 
 Once your server is up and running, you can start building your first workflow. We'll use the workflow that we introduced on the [welcome page](./). We prefer to write our workflows in Jupyter notebooks, but this should work fine from a regular Python interpreter as well.
 
@@ -44,7 +44,7 @@ demo_db = client.integration("aqueduct_demo")
 reviews_table = demo_db.sql("select * from hotel_reviews;")
 ```
 
-`reviews_table` is an [Artifact](artifacts.md) -- simply a wrapper around some data -- in Aqueduct terminology and will now serve as the base data for our workflow. We can apply Python functions to it in order to transform it.&#x20;
+`reviews_table` is an [Artifact](artifacts.md) -- simply a wrapper around some data -- in Aqueduct terminology and will now serve as the base data for our workflow. We can apply Python functions to it in order to transform it.
 
 A piece of Python code that transforms an Artifact is called an [Operator](operators.md), which is simply just a decorated Python function. Here, we'll write an Operator that uses [HuggingFace's Transformers package](https://huggingface.co/docs/transformers/index) to apply a sentiment analysis model to the hotel reviews in our dataset. We can call this function on our `reviews_table` Artifact like a regular Python function.
 
@@ -86,5 +86,5 @@ And we're done! 🎉
 We've created our first workflow together, and you're off to the races. Here are some next steps:
 
 * Check out our [example workflows](example-workflows/) for some more Aqueduct workflows.
-* Check out our guide on [Workflows](workflows/page-4.md) for a deep dive on how to define, preview, and create workflows.
+* Check out our guide on [Workflows](workflows/) for a deep dive on how to define, preview, and create workflows.
 * Check out our documentation on [Operators](operators.md), [Artifacts](artifacts.md), and [Metrics & Checks](metrics-and-checks.md) for deep dives into creating and interacting with each.
