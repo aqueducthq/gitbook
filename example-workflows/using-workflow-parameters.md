@@ -525,7 +525,7 @@ table.get(parameters={"nationality": "Australia"})
 ---
 ### Builtin SQL Parameters
 
-There are also a number of builtin parameter tags that we support for you! See https://docs.aqueducthq.com/page-4/parameterizing-a-workflow for a list of all of them.
+There are also a number of builtin parameter tags that we support for you! See https://docs.aqueducthq.com/workflows/parameterizing-a-workflow for a list of all of them.
 
 Below is an example of the fairly self-explanatory "today" tag:
 

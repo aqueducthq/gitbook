@@ -15,8 +15,7 @@ Every parameter must have a default value. This is so that when a workflow is ru
 The value of a parameter can be any type, as long as Aqueduct can convert it into a json string with `JSON.dumps()`. The exception is SQL query parameters,
 which must be a string type.
 
-The value of a parameter in the workflow can be changed by supplying a dictionary mapping the parameter name to its new value. To trigger a workflow with 
-the different parameters, call `client.trigger(parameters={<param_name>: <param_val>})`. Similarly, to realize an artifact using different parameters, use
+The value of a parameter in the workflow can be changed by supplying a dictionary mapping the parameter name to its new value. To trigger a workflow with different parameters, call `client.trigger(parameters={<param_name>: <param_val>})`. Similarly, to realize an artifact using different parameters, use
 `artifact.get(parameters={<param_name>: <param_val>)`. The new parameter value does not have to be the same type as its default value.
 
 Note that triggering a workflow with non-default parameters is a one-off operation. It will not change the default parameters for future runs of the workflow. 

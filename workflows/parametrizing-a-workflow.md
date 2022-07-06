@@ -1,2 +1,0 @@
-# Parametrizing a Workflow
-
