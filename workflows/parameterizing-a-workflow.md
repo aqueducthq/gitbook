@@ -1,6 +1,6 @@
 # Workflow Parameters
 
-See this [**Workflow Parameters Tutorial**](example-workflows/using-workflow-parameters.md) notebook for a walkthrough of the API.
+See this [**Workflow Parameters Tutorial**](../example-workflows/using-workflow-parameters.md) notebook for a walkthrough of the API.
 
 Oftentimes, arguments to workflows might not be known until runtime. A workflow might even need to be run multiple times with different parameters.
 
