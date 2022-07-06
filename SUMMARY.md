@@ -14,7 +14,7 @@
   * [Churn Ensemble](example-workflows/churn-ensemble.md)
   * [Sentiment Analysis](example-workflows/sentiment-analysis.md)
   * [Train and Inference](example-workflows/train-and-inference.md)
-  * [Using Workflow Parameters] (example-workflows/using-workflow-parameters.md)
+  * [Using Workflow Parameters](example-workflows/using-workflow-parameters.md)
 * [Workflows](workflows/README.md)
   * [Creating a Workflow](workflows/creating-a-workflow.md)
   * [Workflow Versions](workflows/workflow-versions.md)
