@@ -27,4 +27,4 @@ This would overwrite the previous version of the workflow -- which returned the 
 
 If you simply want to edit the name or description of a workflow, that can be done from the settings view on the UI. Simply enter the new workflow name and description and hit `Save`.
 
-![](<../.gitbook/assets/image (4) (1).png>)
+![](<../.gitbook/assets/image (3) (1) (1) (1).png>)

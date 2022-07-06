@@ -8,7 +8,7 @@ Half the battle is often knowing a workflow failed. Aqueduct sends notifications
 
 &#x20;
 
-![Aqueduct's Notifications pane](<../.gitbook/assets/image (6).png>)
+![Aqueduct's Notifications pane](<../.gitbook/assets/image (4).png>)
 
 ### Workflow Status: Finding Your Errors
 
