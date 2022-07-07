@@ -53,19 +53,13 @@ Then, you can can install Aqueduct:
 pip install aqueduct-ml
 ```
 
-Start the backend server:
+Start the Aqueduct server (this is a blocking command):
 
 ```bash
-aqueduct server &
+aqueduct start
 ```
 
-Start the UI server:
-
-```bash
-aqueduct ui &
-```
-
-And retrieve your API key:
+And retrieve your API key (in a separate terminal):
 
 ```bash
 aqueduct apikey
