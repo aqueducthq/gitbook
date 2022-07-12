@@ -53,11 +53,6 @@ sentiment_table.save(demo_db.config(table="sentiment_pred", update_mode="replace
 # In Aqueduct, a metric is a numerical measurement of a some predictions. Here, 
 # we calculate the average sentiment score returned by our machine learning 
 # model, which is something we can track over time.
-
-
-# In Aqueduct, a metric is a numerical measurement of a some predictions. Here, 
-# we calculate the average sentiment score returned by our machine learning 
-# model, which is something we can track over time.
 @metric
 def average_sentiment(reviews_with_sent):
     return (reviews_with_sent["label"] == "POSITIVE").mean()
